@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookshelf Apps</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+
+    <!-- Sweat alert -->
+    <script src="js/sweatalert.js"></script>
+
+    <!-- Remix Icon -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h3>Bookshelf Apps</h3>
+
+      <form id="searchForm" data-testid="searchBookForm">
+        <div class="input-group">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search by title"
+            autocomplete="off"
+            autofocus
+            data-testid="searchBookFormTitleInput"
+          />
+          <button
+            type="submit"
+            data-testid="searchBookFormSubmitButton"
+            id="searchSubmit"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </header>
+
+    <main>
+      <!-- Kode untuk menambah buku baru -->
+      <section class="tambah-buku">
+        <h2 class="title">Tambah Data Buku Baru</h2>
+        <form id="bookForm" data-testid="bookForm">
+          <div class="input-group">
+            <label for="title">Title Book</label>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              required
+              autocomplete="off"
+              data-testid="bookFormTitleInput"
+            />
+          </div>
+          <div class="input-group">
+            <label for="author">Author Book</label>
+            <input
+              type="text"
+              name="author"
+              id="author"
+              required
+              autocomplete="off"
+              data-testid="bookFormAuthorInput"
+            />
+          </div>
+          <div class="input-group">
+            <label for="year">Publication Year</label>
+            <input
+              type="number"
+              name="year"
+              id="year"
+              required
+              autocomplete="off"
+              data-testid="bookFormYearInput"
+            />
+          </div>
+          <div class="input-group-inline">
+            <label for="is-complete"> already read</label>
+            <input
+              type="checkbox"
+              name="is-complete"
+              id="is-complete"
+              data-testid="bookFormIsCompleteCheckbox"
+            />
+          </div>
+          <button type="submit" data-testid="bookFormSubmitButton">
+            Add Book
+          </button>
+        </form>
+
+        <div id="result">
+          <!-- Kode hasil pencarian -->
+        </div>
+      </section>
+
+      <div class="data-buku">
+        <section class="book-shelf" data-testid="incompleteBookList">
+          <h2 class="title">Belum Selesai Dibaca</h2>
+          <div id="article-book">
+            <!-- kode untuk buku yang unchecked(belum dibaca) -->
+          </div>
+        </section>
+
+        <section class="book-shelf" data-testid="completeBookList">
+          <h2 class="title">Selesai Dibaca</h2>
+          <div id="article-book-checked">
+            <!-- kode untuk buku yang checked(sudah dibaca) -->
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
