@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --first-color: rgba(180, 180, 180, 1);
+  --secon-color: rgba(240, 240, 240, 0.801);
+  --blue-color: rgb(0, 47, 255);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+header,
+footer {
+  background-color: var(--first-color);
+  color: white;
+  padding-block: 0.5rem;
+}
+
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.header-section {
+  flex-direction: column;
+  row-gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 0.5rem;
+}
+
+.header-section a {
+  color: black;
+}
+
+.form-search {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-search .form-group {
+  position: relative;
+}
+
+.form-search .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid var(--first-color);
+  border-radius: 5px;
+}
+
+.form-search button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.6rem;
+  border: none;
+  outline: none;
+  background-color: var(--first-color);
+  color: white;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  cursor: pointer;
+}
+
+.body-section {
+  padding-block: 0.5rem;
+}
+
+body.modal-blur {
+  overflow: hidden;
+}
+
+.modal-blur :is(header, #notesContainer, ) {
+  filter: blur(8px);
+  pointer-events: none;
+}
+
+section#modalForm.modal-open {
+  top: 5rem;
+}
+
+section#modalForm {
+  position: absolute;
+  z-index: 100;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  background-color: white;
+  /* border: 1px solid var(--first-color); */
+  border-radius: 16px;
+  padding: 1.5rem;
+  transition: all 0.5s;
+}
+
+section#modalForm h1 {
+  margin-bottom: 0.6rem;
+}
+
+section#modalForm .form-group {
+  margin-bottom: 0.5rem;
+}
+
+section#modalForm .form-group label {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+section#modalForm .form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid var(--first-color);
+  border-radius: 5px;
+}
+
+section#modalForm .form-group textarea {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding: 0.5rem;
+  outline: none;
+  border: 1px solid var(--first-color);
+  border-radius: 5px;
+  height: 100px;
+  resize: none;
+}
+
+section#modalForm .form-group button {
+  padding: 0.5rem;
+  border: none;
+  outline: none;
+  background-color: rgb(83, 83, 83);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  opacity: 90%;
+}
+
+section#modalForm form .invalid-feedback {
+  color: red;
+  display: none;
+}
+
+section#modalForm .form-group button:hover {
+  opacity: 100%;
+}
+
+/* Small */
+@media screen and (min-width: 640px) {
+  .container {
+    max-width: 640px;
+    padding-inline: 2rem;
+  }
+
+  .header-section {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .form-search {
+    width: 60%;
+  }
+}
+
+/* Medium */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin-inline: auto;
+    padding-inline: 3rem;
+  }
+
+  .form-search {
+    width: 70%;
+  }
+}
+
+/* Large */
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+    margin-inline: auto;
+    padding-inline: 4rem;
+  }
+
+  .form-search {
+    width: 35%;
+  }
+}
+
+/* Extra Large */
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 5rem;
+  }
+}

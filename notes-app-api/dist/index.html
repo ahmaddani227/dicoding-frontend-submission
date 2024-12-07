@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Notes App</title>
+    <script defer="defer" src="bundle.js"></script>
+  </head>
+  <body>
+    <header><app-bar></app-bar></header>
+    <main>
+      <div class="container">
+        <section id="notesContainer">
+          <div class="header-section">
+            <a href="#" id="addNote">Add Note</a>
+            <form action="" class="form-search">
+              <div class="form-group">
+                <input name="search" id="search" placeholder="Title Note" />
+              </div>
+              <button>Search</button>
+            </form>
+          </div>
+          <div class="body-section" id="bodySection">
+            <h1>Note Unarchived</h1>
+            <note-list></note-list>
+          </div>
+          <hr style="border-top: 1px dashed #8c8b8b; margin-bottom: 1rem" />
+          <div id="noteArchived">
+            <h1>Note Archived</h1>
+            <note-list></note-list>
+          </div>
+        </section>
+        <section id="modalForm">
+          <h1>Add Note</h1>
+          <form id="formAddNote">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input name="title" id="title" autocomplete="off" required />
+            </div>
+            <div class="form-group">
+              <label for="body">body</label>
+              <textarea name="body" id="body" required></textarea>
+            </div>
+            <div class="form-group">
+              <button id="cencel">Cencel</button> <button>Add Note</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <footer><app-footer></app-footer></footer>
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
