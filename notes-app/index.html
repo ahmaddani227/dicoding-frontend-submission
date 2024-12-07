@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notes App</title>
+    <link rel="stylesheet" href="src/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <app-bar></app-bar>
+    </header>
+
+    <main>
+      <div class="container">
+        <section id="notesContainer">
+          <div class="header-section">
+            <a href="#" id="addNote">Add Note</a>
+
+            <form action="" class="form-search">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="search"
+                  id="search"
+                  placeholder="Title Note"
+                />
+              </div>
+              <button>Search</button>
+            </form>
+          </div>
+
+          <div class="body-section" id="bodySection">
+            <note-list></note-list>
+          </div>
+        </section>
+
+        <section id="modalForm">
+          <h1>Add Note</h1>
+          <form id="addNote">
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input
+                type="text"
+                name="title"
+                id="title"
+                autocomplete="off"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="body">body</label>
+              <textarea name="body" id="body" required></textarea>
+            </div>
+            <div class="form-group">
+              <button id="cencel">Cencel</button>
+              <button id="submit">Add Note</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+
+    <footer class="container">
+      <app-footer></app-footer>
+    </footer>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>
